@@ -10,9 +10,7 @@
 #' special meaning in a \code{Makefile}, use \code{$$} in scripts that need
 #' to use the dollar sign themselves.
 #'
-#' @param target Target names as a character vector
-#' @param deps Dependency names as a character vector
-#' @param script A script to execute to build the targets.
+#' @inheritParams append_make_rule
 #'
 #' @examples
 #' create_make_rule("all", c("first_target", "second_target"))
@@ -32,6 +30,29 @@ create_make_rule <- function(targets, deps = NULL, script = NULL) {
       script = script
     ),
     class = "MakefileR_rule")
+}
+
+#' Appends a Makefile rule to a Makefile
+#'
+#' This helper function creates a rule and appends it to an existing Makefile.
+#' Most useful in pipes.
+#'
+#' @param makefile A Makefile created by \code{\link{create_makefile}}
+#' @param targets Target names as a character vector
+#' @param deps Dependency names as a character vector
+#' @param script A script to execute to build the targets.
+#' @return The first parameter, with the newly created rule appended
+#' @seealso \code{\link{create_make_rule}}, \code{\link{create_makefile}}
+#'
+#' @examples
+#' create_makefile() %>%
+#'   append_make_rule("all", c("first_target", "second_target")) %>%
+#'   append_make_rule(".FORCE") %>%
+#'   append_make_rule("first_target", ".FORCE", "echo 'Building first target'") %>%
+#'   append_make_rule("second_target", "first_target",
+#'     c("echo 'Building second target'", "echo 'Done'"))
+append_make_rule <- function(makefile, targets, deps = NULL, script = NULL) {
+  c(makefile, create_make_rule(targets = targets, deps = deps, script = script))
 }
 
 #' @export

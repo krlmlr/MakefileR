@@ -7,11 +7,11 @@
 create_make_rule(targets, deps = NULL, script = NULL)
 }
 \arguments{
+\item{targets}{Target names as a character vector}
+
 \item{deps}{Dependency names as a character vector}
 
 \item{script}{A script to execute to build the targets.}
-
-\item{target}{Target names as a character vector}
 }
 \description{
 A rule in a \code{Makefile} consists of a (list of) targets which may
