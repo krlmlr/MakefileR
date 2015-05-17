@@ -6,10 +6,12 @@ Description: This package provides a user-friendly interface for the
   construction of Makefiles.
 Depends: R (>= 3.2.0)
 Imports: magrittr
-Suggests: testthat
+Suggests: testthat,
+    knitr
 License: GPL-3
 LazyData: true
 Encoding: UTF-8
 GitHub: https://github.com/krlmlr/MakefileR
 URL: https://krlmlr.github.io/MakefileR
 BugReports: https://github.com/krlmlr/MakefileR/issues
+VignetteBuilder: knitr
