@@ -11,6 +11,7 @@
 #'
 #' @references \url{https://www.gnu.org/software/make/manual/}
 #'
+#' @importFrom magrittr %>% equals
 #' @export
 create_makefile <- function(..., .dots = NULL) {
   rules <- c(list(...), .dots)
@@ -30,4 +31,12 @@ format.MakefileR_file <- function(x, ...) {
 #' @export
 print.MakefileR_file <- function(x, ...) {
   cat(paste(format(x), collapse = "\n"))
+}
+
+#' @export
+c.MakefileR_file <- function(..., recursive = FALSE) {
+  rules <- list(...)
+  makefile <- rules[[1L]]
+  rules <- rules[-1L]
+  create_makefile(.dots = c(unclass(makefile), rules))
 }

@@ -51,6 +51,8 @@ create_make_rule <- function(targets, deps = NULL, script = NULL) {
 #'   append_make_rule("first_target", ".FORCE", "echo 'Building first target'") %>%
 #'   append_make_rule("second_target", "first_target",
 #'     c("echo 'Building second target'", "echo 'Done'"))
+#'
+#' @export
 append_make_rule <- function(makefile, targets, deps = NULL, script = NULL) {
   c(makefile, create_make_rule(targets = targets, deps = deps, script = script))
 }
@@ -59,7 +61,7 @@ append_make_rule <- function(makefile, targets, deps = NULL, script = NULL) {
 format.MakefileR_rule <- function(x, ...) {
   c(
     sprintf("%s: %s", combine_targets(x$targets), combine_targets(x$deps)),
-    paste0("\t", x$script)
+    if (!is.null(x$script)) paste0("\t", x$script)
   )
 }
 
