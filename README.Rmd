@@ -7,9 +7,42 @@ output:
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, echo = FALSE}
+library(magrittr)
 knitr::opts_chunk$set(
-  collapse = TRUE,
   comment = "#>",
   fig.path = "README-"
 )
+knit_print.MakefileR_file <- function(x, options) {
+  knitr::knit_print(
+    c("``` Makefile",
+      format(x) %>% gsub("\t", "⇥      ", .),
+      "```") %>%
+      paste(collapse = "\n") %>%
+      knitr::asis_output(), options)
+}
+knit_print.MakefileR_rule <- knit_print.MakefileR_file
 ```
+
+# MakefileR
+
+This little package helps creating `Makefile` files programmatically.
+
+```{r}
+library(MakefileR)
+create_make_rule("all", c("first_target", "second_target"))
+
+create_make_rule(".FORCE")
+
+create_make_rule("first_target", ".FORCE", "echo 'Building first target'")
+
+create_make_rule("second_target", "first_target",
+  c("echo 'Building second target'", "echo 'Done'"))
+
+create_makefile() %>%
+  append_make_rule("all", c("first_target", "second_target")) %>%
+  append_make_rule(".FORCE") %>%
+  append_make_rule("first_target", ".FORCE", "echo 'Building first target'") %>%
+  append_make_rule("second_target", "first_target",
+    c("echo 'Building second target'", "echo 'Done'"))
+```
+
