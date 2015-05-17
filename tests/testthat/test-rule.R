@@ -12,3 +12,16 @@ test_that("target-dep rule", {
                c("a: b", "\ttrue", "\tfalse"))
   expect_error(create_make_rule(character()), "target.*required")
 })
+
+test_that("appending rules", {
+  rules <- list(
+    create_make_rule(".FORCE"),
+    create_make_rule("a", "b")
+  )
+  expect_equal(create_makefile(.dots = rules),
+               Reduce(c, rules, init = create_makefile()))
+  expect_equal(create_makefile(.dots = rules),
+               create_makefile() %>%
+                 append_make_rule(".FORCE") %>%
+                 append_make_rule("a", "b"))
+})
