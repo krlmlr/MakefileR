@@ -2,6 +2,9 @@
 ^\.Rproj\.user$
 ^README\.Rmd$
 ^README-.*\.png$
+^\.gitignore$
+^NEWS\.md$
+^NEWS\.md\.tmpl$
 ^Makefile$
 ^Makefile\.in$
 ^makeR
