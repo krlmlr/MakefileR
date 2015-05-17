@@ -61,7 +61,12 @@ append_make_rule <- function(makefile, targets, deps = NULL, script = NULL) {
 #' @export
 format.MakefileR_rule <- function(x, ...) {
   c(
-    sprintf("%s: %s", combine_targets(x$targets), combine_targets(x$deps)),
+    sprintf("%s:%s",
+            combine_targets(x$targets),
+            if (!is.null(x$deps))
+              combine_targets(c("", x$deps))
+            else
+              ""),
     if (!is.null(x$script)) paste0("\t", x$script)
   )
 }
