@@ -1,6 +1,6 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-MakefileR
-=========
+MakefileR [![wercker status](https://app.wercker.com/status/280c3f12547a0b3fd9d9e812d7fa854f/s/master "wercker status")](https://app.wercker.com/project/bykey/280c3f12547a0b3fd9d9e812d7fa854f)
+================================================================================================================================================================================================
 
 This little package helps creating `Makefile` files programmatically.
 
