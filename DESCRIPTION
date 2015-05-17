@@ -6,6 +6,7 @@ Description: This package provides a user-friendly interface for the
   construction of Makefiles.
 Depends: R (>= 3.2.0)
 Imports: magrittr
+Suggests: testthat
 License: GPL-3
 LazyData: true
 Encoding: UTF-8
