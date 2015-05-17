@@ -1,0 +1,2 @@
+- Initial release
+- Functions `create_makefile`, `create_make_rule` and `append_make_rule`
