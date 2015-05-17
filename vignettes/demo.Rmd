@@ -26,7 +26,22 @@ knit_print.MakefileR_file <- function(x, options) {
 knit_print.MakefileR_rule <- knit_print.MakefileR_file
 ```
 
-The `MakefileR` package helps creating `Makefile` files programmatically.
+[GNU Make](https://www.gnu.org/software/make) is a standard tool to define
+transformation rules.
+Each rule consists of a (list of) targets which may depend on one or more
+source files, and optionally a script that needs to be executed to create
+the target.
+A `Makefile` is essentially a collection of such rules.
+
+> Make figures out automatically which files it needs to update, based on which source files have changed. ...
+As a result, if you change a few source files and then run Make, it does not need to [redo all the work]. It updates only those non-source files that depend directly or indirectly on the source files that you changed.
+
+Make is readily available on all major platforms,
+also [on Microsoft Windows](http://gnuwin32.sourceforge.net/packages/make.htm).
+The `MakefileR` package helps creating `Makefile` files programmatically
+from R.
+
+## Creating rules
 
 ```{r}
 library(MakefileR)
@@ -38,7 +53,11 @@ create_make_rule("first_target", ".FORCE", "echo 'Building first target'")
 
 create_make_rule("second_target", "first_target",
   c("echo 'Building second target'", "echo 'Done'"))
+```
 
+## Creating Makefile files
+
+```{r}
 create_makefile() %>%
   append_make_rule("all", c("first_target", "second_target")) %>%
   append_make_rule(".FORCE") %>%
