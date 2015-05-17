@@ -25,3 +25,10 @@ test_that("appending rules", {
                  append_make_rule(".FORCE") %>%
                  append_make_rule("a", "b"))
 })
+
+test_that("Printing works as expected", {
+  with_mock(
+    cat = identity,
+    rule <- print(create_make_rule("a", "b", "true")))
+  expect_equal(rule, c("a: b\n", "\ttrue\n"))
+})
