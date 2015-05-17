@@ -1,5 +1,5 @@
 Package: MakefileR
-Title: Create Makefiles from R
+Title: Create Makefiles using R
 Version: 0.0-0
 Authors@R: as.person("Kirill Müller <krlmlr+r@mailbox.org> [aut, cre]")
 Description: This package provides a user-friendly interface for the
