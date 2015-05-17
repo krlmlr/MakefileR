@@ -2,9 +2,8 @@
 #'
 #' A \code{Makefile} consists of a list of rules.
 #'
-#' @param target Target names as a character vector
-#' @param deps Dependency names as a character vector
-#' @param script A script to execute to build the targets.
+#' @param ... Rules created by \code{\link{create_make_rule}}
+#' @param .dots A list rules in addition to \code{...}
 #'
 #' @examples
 #' create_makefile(create_make_rule("all", c("first_target", "second_target")))

@@ -7,11 +7,9 @@
 create_makefile(..., .dots = NULL)
 }
 \arguments{
-\item{target}{Target names as a character vector}
+\item{...}{Rules created by \code{\link{create_make_rule}}}
 
-\item{deps}{Dependency names as a character vector}
-
-\item{script}{A script to execute to build the targets.}
+\item{.dots}{A list rules in addition to \code{...}}
 }
 \description{
 A \code{Makefile} consists of a list of rules.
