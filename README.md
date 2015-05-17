@@ -7,4 +7,4 @@ This little package helps creating `Makefile` files programmatically. Install fr
 devtools::install("krlmlr/MakefileR")
 ```
 
-See the [vignette]() for more detail.
+See the [vignette](http://krlmlr.github.io/MakefileR/vignettes/demo.html) for more detail.
