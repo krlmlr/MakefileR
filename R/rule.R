@@ -45,6 +45,7 @@ create_make_rule <- function(targets, deps = NULL, script = NULL) {
 #' @seealso \code{\link{create_make_rule}}, \code{\link{create_makefile}}
 #'
 #' @examples
+#' library(magrittr)
 #' create_makefile() %>%
 #'   append_make_rule("all", c("first_target", "second_target")) %>%
 #'   append_make_rule(".FORCE") %>%

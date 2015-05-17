@@ -23,6 +23,7 @@ This helper function creates a rule and appends it to an existing Makefile.
 Most useful in pipes.
 }
 \examples{
+library(magrittr)
 create_makefile() \%>\%
   append_make_rule("all", c("first_target", "second_target")) \%>\%
   append_make_rule(".FORCE") \%>\%
