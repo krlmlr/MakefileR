@@ -75,7 +75,7 @@ format.MakefileR_rule <- function(x, ...) {
 
 #' @export
 print.MakefileR_rule <- function(x, ...) {
-  cat(paste(format(x), "\n"))
+  cat(paste0(format(x), "\n"))
 }
 
 combine_targets <- function(targets) {

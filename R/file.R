@@ -29,7 +29,7 @@ format.MakefileR_file <- function(x, ...) {
 
 #' @export
 print.MakefileR_file <- function(x, ...) {
-  cat(paste(format(x), "\n"))
+  cat(paste0(format(x), "\n"))
 }
 
 #' @export
