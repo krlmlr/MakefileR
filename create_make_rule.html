@@ -78,23 +78,23 @@ to use the dollar sign themselves.</p>
     <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>create_make_rule(&quot;all&quot;, c(&quot;first_target&quot;, &quot;second_target&quot;))
 </div>
-<div class='output'>all: first_target second_target 
+<div class='output'>all: first_target second_target
 </div>
 <div class='input'>create_make_rule(&quot;.FORCE&quot;)
 </div>
-<div class='output'>.FORCE: 
+<div class='output'>.FORCE:
 </div>
 <div class='input'>create_make_rule(&quot;first_target&quot;, &quot;.FORCE&quot;, &quot;echo &#39;Building first target&#39;&quot;)
 </div>
-<div class='output'>first_target: .FORCE 
- 	echo &#39;Building first target&#39; 
+<div class='output'>first_target: .FORCE
+ 	echo &#39;Building first target&#39;
 </div>
 <div class='input'>create_make_rule(&quot;second_target&quot;, &quot;first_target&quot;,
  c(&quot;echo &#39;Building second target&#39;&quot;, &quot;echo &#39;Done&#39;&quot;))
 </div>
-<div class='output'>second_target: first_target 
- 	echo &#39;Building second target&#39; 
- 	echo &#39;Done&#39; 
+<div class='output'>second_target: first_target
+ 	echo &#39;Building second target&#39;
+ 	echo &#39;Done&#39;
 </div></pre>
   </div>
   <div class="span4">
