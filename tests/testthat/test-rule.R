@@ -28,7 +28,7 @@ test_that("appending rules", {
 
 test_that("Printing works as expected", {
   with_mock(
-    cat = identity,
+    cat = function(x, sep) x,
     rule <- print(create_make_rule("a", "b", "true")))
   expect_equal(rule, c("a: b\n", "\ttrue\n"))
 })

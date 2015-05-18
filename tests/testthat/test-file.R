@@ -8,7 +8,7 @@ test_that("Empty Makefile includes only comment", {
 
 test_that("Printing works as expected", {
   with_mock(
-    cat = identity,
+    cat = function(x, sep) x,
     makefile <- print(create_makefile()))
   expect_match(makefile, "^# .* do not edit.*\n$")
   expect_equal(length(makefile), 1)
