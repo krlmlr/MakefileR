@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<title></title>
+<title>Creating rules</title>
 
 <script type="text/javascript">
 window.onload = function() {
@@ -201,7 +201,24 @@ hr {
 </head>
 
 <body>
-<p>The <code>MakefileR</code> package helps creating <code>Makefile</code> files programmatically.</p>
+<p><a href="https://www.gnu.org/software/make">GNU Make</a> is a standard tool to define
+transformation rules.
+Each rule consists of a (list of) targets which may depend on one or more
+source files, and optionally a script that needs to be executed to create
+the target.
+A <code>Makefile</code> is essentially a collection of such rules.</p>
+
+<blockquote>
+<p>Make figures out automatically which files it needs to update, based on which source files have changed. &hellip;
+As a result, if you change a few source files and then run Make, it does not need to [redo all the work]. It updates only those non-source files that depend directly or indirectly on the source files that you changed.</p>
+</blockquote>
+
+<p>Make is readily available on all major platforms,
+also <a href="http://gnuwin32.sourceforge.net/packages/make.htm">on Microsoft Windows</a>.
+The <code>MakefileR</code> package helps creating <code>Makefile</code> files programmatically
+from R.</p>
+
+<h2>Creating rules</h2>
 
 <pre><code class="r">library(MakefileR)
 create_make_rule(&quot;all&quot;, c(&quot;first_target&quot;, &quot;second_target&quot;))
@@ -231,6 +248,8 @@ create_make_rule(&quot;all&quot;, c(&quot;first_target&quot;, &quot;second_targe
 ⇥      echo &#39;Building second target&#39;
 ⇥      echo &#39;Done&#39;
 </code></pre>
+
+<h2>Creating Makefile files</h2>
 
 <pre><code class="r">create_makefile() %&gt;%
   append_make_rule(&quot;all&quot;, c(&quot;first_target&quot;, &quot;second_target&quot;)) %&gt;%
