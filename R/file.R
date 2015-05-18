@@ -14,7 +14,7 @@
 #' @export
 create_makefile <- function(..., .dots = NULL) {
   rules <- c(list(...), .dots)
-  stopifnot(lapply(rules, class) %>% lapply(tail, 1L) %>%
+  stopifnot(lapply(rules, class) %>% sapply(tail, 1L) %>%
               equals("MakefileR_rule"))
   structure(rules, class = "MakefileR_file")
 }
