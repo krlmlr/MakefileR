@@ -10,12 +10,16 @@
 #'
 #' @references \url{https://www.gnu.org/software/make/manual/}
 #'
-#' @importFrom magrittr %>% equals
+#' @importFrom magrittr %>% equals is_greater_than
 #' @export
 create_makefile <- function(..., .dots = NULL) {
   rules <- c(list(...), .dots)
-  stopifnot(lapply(rules, class) %>% sapply(tail, 1L) %>%
-              equals("MakefileR_rule"))
+  stopifnot(
+    lapply(rules, class) %>%
+      sapply(tail, 1L) %>%
+      match(c("MakefileR_rule", "MakefileR_def"), 0L) %>%
+      is_greater_than(0L)
+  )
   structure(rules, class = "MakefileR_file")
 }
 
