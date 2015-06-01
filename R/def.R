@@ -3,6 +3,10 @@
 #' A variable definition in a \code{Makefile} consists of a variable name
 #' and its defition.  Both are separated by the equality sign \code{=}.
 #'
+#' No quoting is applied to the definition by this function.
+#' Currently, both variable and definition are required to be character values
+#' of length one.
+#'
 #' @inheritParams append_make_def
 #'
 #' @examples
@@ -13,10 +17,10 @@
 #' @export
 create_make_def <- function(variable, definition) {
   if (length(variable) != 1) {
-    stop("variable must be an atomic character value")
+    stop("variable must be a character value")
   }
   if (length(definition) != 1) {
-    stop("definition must be an atomic character value")
+    stop("definition must be a character value")
   }
   structure(
     list(

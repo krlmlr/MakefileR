@@ -15,6 +15,11 @@ create_make_def(variable, definition)
 A variable definition in a \code{Makefile} consists of a variable name
 and its defition.  Both are separated by the equality sign \code{=}.
 }
+\details{
+No quoting is applied to the definition by this function.
+Currently, both variable and definition are required to be character values
+of length one.
+}
 \examples{
 create_make_def("R_USER_LIBRARY", .libPaths()[[1L]])
 }
