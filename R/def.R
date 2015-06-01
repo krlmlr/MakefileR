@@ -44,8 +44,8 @@ create_make_def <- function(variable, definition) {
 #'   append_make_def("R_USER_LIBRARY", .libPaths()[[1L]])
 #'
 #' @export
-append_make_def <- function(variable, definition) {
-  c(makefile, append_make_def(variable = variable, definition = definition))
+append_make_def <- function(makefile, variable, definition) {
+  c(makefile, create_make_def(variable = variable, definition = definition))
 }
 
 #' @export

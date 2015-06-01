@@ -4,14 +4,14 @@
 \alias{append_make_def}
 \title{Appends a Makefile variable definition to a Makefile}
 \usage{
-append_make_def(variable, definition)
+append_make_def(makefile, variable, definition)
 }
 \arguments{
+\item{makefile}{A Makefile created by \code{\link{create_makefile}}}
+
 \item{variable}{Variable name}
 
 \item{definition}{Definition for this variable}
-
-\item{makefile}{A Makefile created by \code{\link{create_makefile}}}
 }
 \value{
 The first parameter, with the newly created rule appended
