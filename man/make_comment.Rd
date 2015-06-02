@@ -9,6 +9,9 @@ make_comment(...)
 \arguments{
 \item{...}{Character vector(s) without leading hash \code{#}}
 }
+\value{
+An object of class \code{MakefileR_comment}
+}
 \description{
 For helping the reader understand what's happening
 }

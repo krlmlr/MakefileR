@@ -11,6 +11,9 @@ makefile(..., .dots = NULL)
 
 \item{.dots}{A list rules in addition to \code{...}}
 }
+\value{
+An object of class \code{MakefileR_file}
+}
 \description{
 A \code{Makefile} consists of a list of rules.
 }

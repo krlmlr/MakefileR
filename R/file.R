@@ -4,6 +4,7 @@
 #'
 #' @param ... Rules created by \code{\link{make_rule}}
 #' @param .dots A list rules in addition to \code{...}
+#' @return An object of class \code{MakefileR_file}
 #'
 #' @examples
 #' makefile(make_rule("all", c("first_target", "second_target")))

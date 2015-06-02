@@ -6,6 +6,7 @@
 #' @param .dots A list rules in addition to \code{...}
 #' @param sep Separator between group items, \code{NULL} (the default) means
 #'   no separator.
+#' @return An object of class \code{MakefileR_group}
 #'
 #' @examples
 #' makefile(make_rule("all", c("first_target", "second_target")))

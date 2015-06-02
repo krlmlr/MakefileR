@@ -3,6 +3,7 @@
 #' For helping the reader understand what's happening
 #'
 #' @param ... Character vector(s) without leading hash \code{#}
+#' @return An object of class \code{MakefileR_comment}
 #'
 #' @examples
 #' make_comment("This is a comment")

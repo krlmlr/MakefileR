@@ -12,7 +12,10 @@ make_group(..., .dots = NULL, sep = NULL)
 \item{.dots}{A list rules in addition to \code{...}}
 
 \item{sep}{Separator between group items, \code{NULL} (the default) means
-  no separator.}
+no separator.}
+}
+\value{
+An object of class \code{MakefileR_group}
 }
 \description{
 Helps separating similar rules.
