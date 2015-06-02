@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>make_def. MakefileR 0.2</title>
+<title>make_comment. MakefileR 0.2</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -48,35 +48,23 @@
         
       </header>
       
-      <h1>Creates a variable definition in a Makefile</h1>
+      <h1>Creates a Makefile comment</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>make_def(variable, definition)</div></pre>
+    <pre><div>make_comment(...)</div></pre>
     
     <h2>Arguments</h2>
     <dl>
-      <dt>variable</dt>
-      <dd>Variable name</dd>
-      <dt>definition</dt>
-      <dd>Definition for this variable</dd>
+      <dt>...</dt>
+      <dd>Character vector(s) without leading hash <code>#</code></dd>
     </dl>
     
     <div class="Description">
       <h2>Description</h2>
 
-      <p>A variable definition in a <code>Makefile</code> consists of a variable name
-and its defition.  Both are separated by the equality sign <code>=</code>.</p>
-  
-    </div>
-
-    <div class="Details">
-      <h2>Details</h2>
-
-      <p>No quoting is applied to the definition by this function.
-Currently, both variable and definition are required to be character values
-of length one.</p>
+      <p>For helping the reader understand what's happening</p>
   
     </div>
 
@@ -88,14 +76,14 @@ of length one.</p>
     </div>
     
     <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>make_def(&quot;R_USER_LIBRARY&quot;, .libPaths()[[1L]])
+    <pre class="examples"><div class='input'>make_comment(&quot;This is a comment&quot;)
 </div>
-<div class='output'>R_USER_LIBRARY=/usr/local/lib/R/site-library
+<div class='output'># This is a comment
 </div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
-      <li>make_def</li>
+      <li>make_comment</li>
     </ul>
     <ul>
       
