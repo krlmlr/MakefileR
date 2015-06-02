@@ -17,10 +17,10 @@
 #' @export
 make_group <- function(..., .dots = NULL, comment = NULL, sep = NULL) {
   rules <- c(list(...), .dots)
-  stopifnot(
-    vapply(rules, inherits, logical(1), "MakefileR")
-  )
-  structure(list(rules = rules, comment = NULL),
+  if (!all(vapply(rules, inherits, logical(1), "MakefileR"))) {
+    stop("All members of the group must inherit from class MakefileR")
+  }
+  structure(list(rules = rules, comment = comment, sep = sep),
             class = c("MakefileR_group", "MakefileR"))
 }
 
