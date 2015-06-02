@@ -7,10 +7,20 @@
 #' Currently, both variable and definition are required to be character values
 #' of length one.
 #'
-#' @inheritParams append_make_def
+#' Use the
+#' \code{\link[base]{c}} function or the \code{\link[base]{+}} operator
+#' to append definitions to groups and Makefiles.
+#'
+#' @param variable Variable name
+#' @param definition Definition for this variable
+#' @return An object of class \code{MakefileR_def}
+#' @seealso \code{\link{makefile}}, \code{\link{make_group}}
+#' @family items
 #'
 #' @examples
 #' make_def("R_USER_LIBRARY", .libPaths()[[1L]])
+#' makefile() +
+#'   make_def("R_USER_LIBRARY", .libPaths()[[1L]])
 #'
 #' @references \url{https://www.gnu.org/software/make/manual/}
 #'
@@ -28,28 +38,6 @@ make_def <- function(variable, definition) {
       definition = definition
     ),
     class = c("MakefileR_def", "MakefileR"))
-}
-
-#' Appends a Makefile variable definition to a Makefile
-#'
-#' This helper function creates a variable definition and appends it to an
-#' existing Makefile.
-#' Most useful in pipes.
-#'
-#' @param makefile A Makefile created by \code{\link{makefile}}
-#' @param variable Variable name
-#' @param definition Definition for this variable
-#' @return The first parameter, with the newly created rule appended
-#' @seealso \code{\link{make_def}}, \code{\link{makefile}}
-#'
-#' @examples
-#' library(magrittr)
-#' makefile() %>%
-#'   append_make_def("R_USER_LIBRARY", .libPaths()[[1L]])
-#'
-#' @export
-append_make_def <- function(makefile, variable, definition) {
-  c(makefile, make_def(variable = variable, definition = definition))
 }
 
 #' @export

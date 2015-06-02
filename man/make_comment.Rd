@@ -9,13 +9,25 @@ make_comment(...)
 \arguments{
 \item{...}{Character vector(s) without leading hash \code{#}}
 }
+\value{
+An object of class \code{MakefileR_comment}
+}
 \description{
 For helping the reader understand what's happening
+}
+\details{
+Use the
+\code{\link[base]{c}} function or the \code{\link[base]{+}} operator
+to append comments to groups and Makefiles.
 }
 \examples{
 make_comment("This is a comment")
 }
 \references{
 \url{https://www.gnu.org/software/make/manual/}
+}
+\seealso{
+Other items: \code{\link{make_def}};
+  \code{\link{make_group}}; \code{\link{make_rule}}
 }
 

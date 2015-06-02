@@ -10,7 +10,16 @@
 #' special meaning in a \code{Makefile}, use \code{$$} in scripts that need
 #' to use the dollar sign themselves.
 #'
-#' @inheritParams append_make_rule
+#' Use the
+#' \code{\link[base]{c}} function or the \code{\link[base]{+}} operator
+#' to append rules to groups and Makefiles.
+#'
+#' @param targets Target names as a character vector
+#' @param deps Dependency names as a character vector
+#' @param script A script to execute to build the targets.
+#' @return An object of class \code{MakefileR_rule}
+#' @seealso \code{\link{makefile}}, \code{\link{make_group}}
+#' @family items
 #'
 #' @examples
 #' make_rule("all", c("first_target", "second_target"))
@@ -18,6 +27,13 @@
 #' make_rule("first_target", ".FORCE", "echo 'Building first target'")
 #' make_rule("second_target", "first_target",
 #'  c("echo 'Building second target'", "echo 'Done'"))
+#'
+#' makefile() +
+#'   make_rule("all", c("first_target", "second_target")) +
+#'   make_rule(".FORCE") +
+#'   make_rule("first_target", ".FORCE", "echo 'Building first target'") +
+#'   make_rule("second_target", "first_target",
+#'     c("echo 'Building second target'", "echo 'Done'"))
 #'
 #' @references \url{https://www.gnu.org/software/make/manual/}
 #'
@@ -32,32 +48,6 @@ make_rule <- function(targets, deps = NULL, script = NULL) {
       script = script
     ),
     class = c("MakefileR_rule", "MakefileR"))
-}
-
-#' Appends a Makefile rule to a Makefile
-#'
-#' This helper function creates a rule and appends it to an existing Makefile.
-#' Most useful in pipes.
-#'
-#' @param makefile A Makefile created by \code{\link{makefile}}
-#' @param targets Target names as a character vector
-#' @param deps Dependency names as a character vector
-#' @param script A script to execute to build the targets.
-#' @return The first parameter, with the newly created rule appended
-#' @seealso \code{\link{make_rule}}, \code{\link{makefile}}
-#'
-#' @examples
-#' library(magrittr)
-#' makefile() %>%
-#'   append_make_rule("all", c("first_target", "second_target")) %>%
-#'   append_make_rule(".FORCE") %>%
-#'   append_make_rule("first_target", ".FORCE", "echo 'Building first target'") %>%
-#'   append_make_rule("second_target", "first_target",
-#'     c("echo 'Building second target'", "echo 'Done'"))
-#'
-#' @export
-append_make_rule <- function(makefile, targets, deps = NULL, script = NULL) {
-  c(makefile, make_rule(targets = targets, deps = deps, script = script))
 }
 
 #' @export

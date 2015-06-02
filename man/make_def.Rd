@@ -11,6 +11,9 @@ make_def(variable, definition)
 
 \item{definition}{Definition for this variable}
 }
+\value{
+An object of class \code{MakefileR_def}
+}
 \description{
 A variable definition in a \code{Makefile} consists of a variable name
 and its defition.  Both are separated by the equality sign \code{=}.
@@ -19,11 +22,23 @@ and its defition.  Both are separated by the equality sign \code{=}.
 No quoting is applied to the definition by this function.
 Currently, both variable and definition are required to be character values
 of length one.
+
+Use the
+\code{\link[base]{c}} function or the \code{\link[base]{+}} operator
+to append definitions to groups and Makefiles.
 }
 \examples{
 make_def("R_USER_LIBRARY", .libPaths()[[1L]])
+makefile() +
+  make_def("R_USER_LIBRARY", .libPaths()[[1L]])
 }
 \references{
 \url{https://www.gnu.org/software/make/manual/}
+}
+\seealso{
+\code{\link{makefile}}, \code{\link{make_group}}
+
+Other items: \code{\link{make_comment}};
+  \code{\link{make_group}}; \code{\link{make_rule}}
 }
 

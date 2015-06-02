@@ -11,13 +11,26 @@ makefile(..., .dots = NULL)
 
 \item{.dots}{A list rules in addition to \code{...}}
 }
+\value{
+An object of class \code{MakefileR_file}
+}
 \description{
 A \code{Makefile} consists of a list of rules.
+}
+\details{
+Use the
+\code{\link[base]{c}} function or the \code{\link[base]{+}} operator
+to append rules, definitions, comments and groups.
 }
 \examples{
 makefile(make_rule("all", c("first_target", "second_target")))
 }
 \references{
 \url{https://www.gnu.org/software/make/manual/}
+}
+\seealso{
+\code{\link{make_rule}}, \code{\link{make_def}},
+  \code{\link{make_group}}, \code{\link{make_comment}},
+  \code{\link{c.MakefileR_group}}
 }
 
