@@ -21,9 +21,9 @@ test_that("appending rules", {
   expect_equal(makefile(.dots = rules),
                Reduce(c, rules, init = makefile()))
   expect_equal(makefile(.dots = rules),
-               makefile() %>%
-                 append_make_rule(".FORCE") %>%
-                 append_make_rule("a", "b"))
+               makefile() +
+                 make_rule(".FORCE") +
+                 make_rule("a", "b"))
 })
 
 test_that("Printing works as expected", {
