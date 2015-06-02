@@ -32,6 +32,6 @@ makefile() \%>\%
     c("echo 'Building second target'", "echo 'Done'"))
 }
 \seealso{
-\code{\link{make_rule}}, \code{\link{create_makefile}}
+\code{\link{make_rule}}, \code{\link{makefile}}
 }
 

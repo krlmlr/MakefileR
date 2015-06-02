@@ -40,7 +40,7 @@ make_def <- function(variable, definition) {
 #' @param variable Variable name
 #' @param definition Definition for this variable
 #' @return The first parameter, with the newly created rule appended
-#' @seealso \code{\link{make_def}}, \code{\link{create_makefile}}
+#' @seealso \code{\link{make_def}}, \code{\link{makefile}}
 #'
 #' @examples
 #' library(magrittr)

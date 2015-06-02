@@ -15,7 +15,7 @@ makefile(..., .dots = NULL)
 A \code{Makefile} consists of a list of rules.
 }
 \examples{
-makefile(create_make_rule("all", c("first_target", "second_target")))
+makefile(make_rule("all", c("first_target", "second_target")))
 }
 \references{
 \url{https://www.gnu.org/software/make/manual/}

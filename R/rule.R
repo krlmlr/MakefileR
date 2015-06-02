@@ -44,7 +44,7 @@ make_rule <- function(targets, deps = NULL, script = NULL) {
 #' @param deps Dependency names as a character vector
 #' @param script A script to execute to build the targets.
 #' @return The first parameter, with the newly created rule appended
-#' @seealso \code{\link{make_rule}}, \code{\link{create_makefile}}
+#' @seealso \code{\link{make_rule}}, \code{\link{makefile}}
 #'
 #' @examples
 #' library(magrittr)

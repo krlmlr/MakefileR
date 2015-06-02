@@ -27,6 +27,6 @@ makefile() \%>\%
   append_make_def("R_USER_LIBRARY", .libPaths()[[1L]])
 }
 \seealso{
-\code{\link{make_def}}, \code{\link{create_makefile}}
+\code{\link{make_def}}, \code{\link{makefile}}
 }
 

@@ -6,7 +6,7 @@
 #' @param .dots A list rules in addition to \code{...}
 #'
 #' @examples
-#' makefile(create_make_rule("all", c("first_target", "second_target")))
+#' makefile(make_rule("all", c("first_target", "second_target")))
 #'
 #' @references \url{https://www.gnu.org/software/make/manual/}
 #'
