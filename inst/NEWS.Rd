@@ -1,6 +1,12 @@
 \name{NEWS}
 \title{News for Package 'MakefileR'}
 \encoding{UTF-8}
+\section{Changes in MakefileR version 0.3 (2015-06-02)}{
+  \itemize{
+    \item Support \code{+} operator for appending rules to groups
+    \item Remove \code{append_*} functions, replace \code{append_make_...(...)} by \code{c(make_...(...))} or rewrite using \code{+}
+  }
+}
 \section{Changes in MakefileR version 0.2 (2015-06-02)}{
   \itemize{
     \item New functions \code{make_group} and \code{make_comment}
