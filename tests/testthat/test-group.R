@@ -22,9 +22,9 @@ test_that("groups", {
     c("a=b", "", "c=d"))
   expect_equal(
     make_group(
+      make_comment("initial"),
       make_def("a", "b"),
-      .dots = list(make_def("c", "d")),
-      comment = "# initial") %>%
+      .dots = list(make_def("c", "d"))) %>%
       format,
     c("# initial", "a=b", "c=d"))
 })

@@ -4,14 +4,12 @@
 \alias{make_group}
 \title{Creates a group of Makefile items}
 \usage{
-make_group(..., .dots = NULL, comment = NULL, sep = NULL)
+make_group(..., .dots = NULL, sep = NULL)
 }
 \arguments{
 \item{...}{Rules created by \code{\link{make_rule}}}
 
 \item{.dots}{A list rules in addition to \code{...}}
-
-\item{comment}{A comment for the group}
 
 \item{sep}{Separator between group items, \code{NULL} (the default) means
   no separator.}
