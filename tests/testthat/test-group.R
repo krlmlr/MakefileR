@@ -43,3 +43,8 @@ test_that("group of groups", {
       format,
     c("# a", "", "# b", "# c"))
 })
+
+test_that("error checking", {
+  expect_error(make_group(5), "MakefileR")
+  expect_error(make_group(make_comment(), 5), "MakefileR")
+})

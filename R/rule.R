@@ -39,8 +39,9 @@
 #'
 #' @export
 make_rule <- function(targets, deps = NULL, script = NULL) {
-  if (length(targets) == 0L)
+  if (length(targets) == 0L) {
     stop("At least one target is required.")
+  }
   structure(
     list(
       targets = targets,
