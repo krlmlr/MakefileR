@@ -26,8 +26,8 @@ make_group <- function(..., .dots = NULL, sep = NULL) {
 format.MakefileR_group <- function(x, ...) {
   lapply(x$rules, format) %>%
     Reduce(
-      f = function(y, z) c(y, if (is.null(y)) NULL else x$sep, z),
-      init = NULL)
+      f = function(y, z) c(y, if (length(y) == 0L) NULL else x$sep, z),
+      init = character())
 }
 
 #' @export

@@ -2,6 +2,10 @@ context("group")
 
 test_that("groups", {
   expect_equal(
+    make_group() %>%
+      format,
+    character())
+  expect_equal(
     make_group(
       make_def("a", "b"),
       make_def("c", "d")) %>%
