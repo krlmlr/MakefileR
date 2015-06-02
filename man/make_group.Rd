@@ -20,10 +20,21 @@ An object of class \code{MakefileR_group}
 \description{
 Helps separating similar rules.
 }
+\details{
+Use the
+\code{\link[base]{c}} function or the \code{\link[base]{+}} operator
+to append groups to other groups and Makefiles (thus creating nested groups).
+}
 \examples{
 makefile(make_rule("all", c("first_target", "second_target")))
 }
 \references{
 \url{https://www.gnu.org/software/make/manual/}
+}
+\seealso{
+\code{\link{c.MakefileR_group}}
+
+Other items: \code{\link{make_comment}};
+  \code{\link{make_def}}; \code{\link{make_rule}}
 }
 

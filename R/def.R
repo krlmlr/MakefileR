@@ -15,6 +15,7 @@
 #' @param definition Definition for this variable
 #' @return An object of class \code{MakefileR_def}
 #' @seealso \code{\link{makefile}}, \code{\link{make_group}}
+#' @family items
 #'
 #' @examples
 #' make_def("R_USER_LIBRARY", .libPaths()[[1L]])

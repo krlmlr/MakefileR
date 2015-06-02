@@ -50,7 +50,9 @@ makefile() +
 \url{https://www.gnu.org/software/make/manual/}
 }
 \seealso{
-\code{\link{makefile}}, \code{\link{c.MakefileR_group}},
-  \code{\link{make_group}}
+\code{\link{makefile}}, \code{\link{make_group}}
+
+Other items: \code{\link{make_comment}};
+  \code{\link{make_def}}; \code{\link{make_group}}
 }
 

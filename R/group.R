@@ -2,11 +2,17 @@
 #'
 #' Helps separating similar rules.
 #'
+#' Use the
+#' \code{\link[base]{c}} function or the \code{\link[base]{+}} operator
+#' to append groups to other groups and Makefiles (thus creating nested groups).
+#'
 #' @param ... Rules created by \code{\link{make_rule}}
 #' @param .dots A list rules in addition to \code{...}
 #' @param sep Separator between group items, \code{NULL} (the default) means
 #'   no separator.
 #' @return An object of class \code{MakefileR_group}
+#' @seealso \code{\link{c.MakefileR_group}}
+#' @family items
 #'
 #' @examples
 #' makefile(make_rule("all", c("first_target", "second_target")))

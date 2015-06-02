@@ -18,8 +18,8 @@
 #' @param deps Dependency names as a character vector
 #' @param script A script to execute to build the targets.
 #' @return An object of class \code{MakefileR_rule}
-#' @seealso \code{\link{makefile}}, \code{\link{c.MakefileR_group}},
-#'   \code{\link{make_group}}
+#' @seealso \code{\link{makefile}}, \code{\link{make_group}}
+#' @family items
 #'
 #' @examples
 #' make_rule("all", c("first_target", "second_target"))

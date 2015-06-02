@@ -2,9 +2,16 @@
 #'
 #' A \code{Makefile} consists of a list of rules.
 #'
+#' Use the
+#' \code{\link[base]{c}} function or the \code{\link[base]{+}} operator
+#' to append rules, definitions, comments and groups.
+#'
 #' @param ... Rules created by \code{\link{make_rule}}
 #' @param .dots A list rules in addition to \code{...}
 #' @return An object of class \code{MakefileR_file}
+#' @seealso \code{\link{make_rule}}, \code{\link{make_def}},
+#'   \code{\link{make_group}}, \code{\link{make_comment}},
+#'   \code{\link{c.MakefileR_group}}
 #'
 #' @examples
 #' makefile(make_rule("all", c("first_target", "second_target")))
