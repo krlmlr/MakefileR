@@ -1,6 +1,11 @@
 \name{NEWS}
 \title{News for Package 'MakefileR'}
 \encoding{UTF-8}
+\section{Changes in MakefileR version 0.1 (2015-06-02)}{
+  \itemize{
+    \item Strip \code{create_} prefix from functions; to adapt existing code, replace \code{create_make} by \code{make}
+  }
+}
 \section{Changes in MakefileR version 0.0-3 (2015-06-02)}{
   \itemize{
     \item New functions \code{create_make_def} and \code{append_make_def}
