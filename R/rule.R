@@ -31,7 +31,7 @@ make_rule <- function(targets, deps = NULL, script = NULL) {
       deps = deps,
       script = script
     ),
-    class = "MakefileR_rule")
+    class = c("MakefileR_rule", "MakefileR"))
 }
 
 #' Appends a Makefile rule to a Makefile

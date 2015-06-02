@@ -15,12 +15,9 @@
 makefile <- function(..., .dots = NULL) {
   rules <- c(list(...), .dots)
   stopifnot(
-    lapply(rules, class) %>%
-      sapply(tail, 1L) %>%
-      match(c("MakefileR_rule", "MakefileR_def"), 0L) %>%
-      is_greater_than(0L)
+    vapply(rules, inherits, logical(1), "MakefileR")
   )
-  structure(rules, class = "MakefileR_file")
+  structure(rules, class = c("MakefileR_file", "MakefileR"))
 }
 
 #' @export

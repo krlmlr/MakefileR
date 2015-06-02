@@ -27,7 +27,7 @@ make_def <- function(variable, definition) {
       variable = variable,
       definition = definition
     ),
-    class = "MakefileR_def")
+    class = c("MakefileR_def", "MakefileR"))
 }
 
 #' Appends a Makefile variable definition to a Makefile
