@@ -46,5 +46,5 @@ test_that("group of groups", {
 
 test_that("error checking", {
   expect_error(make_group(5), "MakefileR")
-  expect_error(make_group(make_comment(), 5), "MakefileR")
+  expect_error(make_group(make_comment("dummy"), 5), "MakefileR")
 })
