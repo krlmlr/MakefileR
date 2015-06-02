@@ -31,7 +31,7 @@ make_rule <- function(targets, deps = NULL, script = NULL) {
       deps = deps,
       script = script
     ),
-    class = "MakefileR_rule")
+    class = c("MakefileR_rule", "MakefileR"))
 }
 
 #' Appends a Makefile rule to a Makefile
@@ -71,11 +71,6 @@ format.MakefileR_rule <- function(x, ...) {
               ""),
     if (!is.null(x$script)) paste0("\t", x$script)
   )
-}
-
-#' @export
-print.MakefileR_rule <- function(x, ...) {
-  cat(paste0(format(x), "\n"), sep = "")
 }
 
 combine_targets <- function(targets) {

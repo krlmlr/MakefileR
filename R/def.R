@@ -27,7 +27,7 @@ make_def <- function(variable, definition) {
       variable = variable,
       definition = definition
     ),
-    class = "MakefileR_def")
+    class = c("MakefileR_def", "MakefileR"))
 }
 
 #' Appends a Makefile variable definition to a Makefile
@@ -55,9 +55,4 @@ append_make_def <- function(makefile, variable, definition) {
 #' @export
 format.MakefileR_def <- function(x, ...) {
   sprintf("%s=%s", x$variable, x$definition)
-}
-
-#' @export
-print.MakefileR_def <- function(x, ...) {
-  cat(paste0(format(x), "\n"), sep = "")
 }
