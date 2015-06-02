@@ -1,3 +1,5 @@
+- New functions `create_make_def` and `append_make_def`
+
 Version 0.0-2 (2015-05-18)
 ===
 
