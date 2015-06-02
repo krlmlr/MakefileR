@@ -13,6 +13,9 @@ make_rule(targets, deps = NULL, script = NULL)
 
 \item{script}{A script to execute to build the targets.}
 }
+\value{
+An object of class \code{MakefileR_rule}
+}
 \description{
 A rule in a \code{Makefile} consists of a (list of) targets which may
 depend on one or more dependencies each.  Optionally, a script is executed to
@@ -24,14 +27,30 @@ dependency can be referenced by \code{$<}.  Note that the dollar sign has a
 special meaning in a \code{Makefile}, use \code{$$} in scripts that need
 to use the dollar sign themselves.
 }
+\details{
+Use the
+\code{\link[base]{c}} function or the \code{\link[base]{+}} operator
+to append rules to groups and Makefiles.
+}
 \examples{
 make_rule("all", c("first_target", "second_target"))
 make_rule(".FORCE")
 make_rule("first_target", ".FORCE", "echo 'Building first target'")
 make_rule("second_target", "first_target",
  c("echo 'Building second target'", "echo 'Done'"))
+
+makefile() +
+  make_rule("all", c("first_target", "second_target")) +
+  make_rule(".FORCE") +
+  make_rule("first_target", ".FORCE", "echo 'Building first target'") +
+  make_rule("second_target", "first_target",
+    c("echo 'Building second target'", "echo 'Done'"))
 }
 \references{
 \url{https://www.gnu.org/software/make/manual/}
+}
+\seealso{
+\code{\link{makefile}}, \code{\link{c.MakefileR_group}},
+  \code{\link{make_group}}
 }
 
