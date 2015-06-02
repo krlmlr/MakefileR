@@ -32,3 +32,14 @@ test_that("groups", {
       format,
     c("# initial", "a=b", "c=d"))
 })
+
+test_that("group of groups", {
+  expect_equal(
+    make_group(
+      make_group(make_comment("a")),
+      make_group(make_comment("b"), make_comment("c")),
+      sep = ""
+    ) %>%
+      format,
+    c("# a", "", "# b", "# c"))
+})
