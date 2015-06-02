@@ -41,6 +41,7 @@ Make is readily available on all major platforms,
 also [on Microsoft Windows](http://gnuwin32.sourceforge.net/packages/make.htm).
 The `MakefileR` package helps creating `Makefile` files programmatically
 from R.
+The following sections show a few examples and the corresponding output.
 
 ## Creating rules
 
