@@ -13,16 +13,16 @@
 #' @inheritParams append_make_rule
 #'
 #' @examples
-#' create_make_rule("all", c("first_target", "second_target"))
-#' create_make_rule(".FORCE")
-#' create_make_rule("first_target", ".FORCE", "echo 'Building first target'")
-#' create_make_rule("second_target", "first_target",
+#' make_rule("all", c("first_target", "second_target"))
+#' make_rule(".FORCE")
+#' make_rule("first_target", ".FORCE", "echo 'Building first target'")
+#' make_rule("second_target", "first_target",
 #'  c("echo 'Building second target'", "echo 'Done'"))
 #'
 #' @references \url{https://www.gnu.org/software/make/manual/}
 #'
 #' @export
-create_make_rule <- function(targets, deps = NULL, script = NULL) {
+make_rule <- function(targets, deps = NULL, script = NULL) {
   if (length(targets) == 0L)
     stop("At least one target is required.")
   structure(
@@ -39,16 +39,16 @@ create_make_rule <- function(targets, deps = NULL, script = NULL) {
 #' This helper function creates a rule and appends it to an existing Makefile.
 #' Most useful in pipes.
 #'
-#' @param makefile A Makefile created by \code{\link{create_makefile}}
+#' @param makefile A Makefile created by \code{\link{makefile}}
 #' @param targets Target names as a character vector
 #' @param deps Dependency names as a character vector
 #' @param script A script to execute to build the targets.
 #' @return The first parameter, with the newly created rule appended
-#' @seealso \code{\link{create_make_rule}}, \code{\link{create_makefile}}
+#' @seealso \code{\link{make_rule}}, \code{\link{create_makefile}}
 #'
 #' @examples
 #' library(magrittr)
-#' create_makefile() %>%
+#' makefile() %>%
 #'   append_make_rule("all", c("first_target", "second_target")) %>%
 #'   append_make_rule(".FORCE") %>%
 #'   append_make_rule("first_target", ".FORCE", "echo 'Building first target'") %>%
@@ -57,7 +57,7 @@ create_make_rule <- function(targets, deps = NULL, script = NULL) {
 #'
 #' @export
 append_make_rule <- function(makefile, targets, deps = NULL, script = NULL) {
-  c(makefile, create_make_rule(targets = targets, deps = deps, script = script))
+  c(makefile, make_rule(targets = targets, deps = deps, script = script))
 }
 
 #' @export

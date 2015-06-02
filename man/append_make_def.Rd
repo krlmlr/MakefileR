@@ -7,7 +7,7 @@
 append_make_def(makefile, variable, definition)
 }
 \arguments{
-\item{makefile}{A Makefile created by \code{\link{create_makefile}}}
+\item{makefile}{A Makefile created by \code{\link{makefile}}}
 
 \item{variable}{Variable name}
 
@@ -23,10 +23,10 @@ Most useful in pipes.
 }
 \examples{
 library(magrittr)
-create_makefile() \%>\%
+makefile() \%>\%
   append_make_def("R_USER_LIBRARY", .libPaths()[[1L]])
 }
 \seealso{
-\code{\link{create_make_def}}, \code{\link{create_makefile}}
+\code{\link{make_def}}, \code{\link{create_makefile}}
 }
 

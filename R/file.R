@@ -2,17 +2,17 @@
 #'
 #' A \code{Makefile} consists of a list of rules.
 #'
-#' @param ... Rules created by \code{\link{create_make_rule}}
+#' @param ... Rules created by \code{\link{make_rule}}
 #' @param .dots A list rules in addition to \code{...}
 #'
 #' @examples
-#' create_makefile(create_make_rule("all", c("first_target", "second_target")))
+#' makefile(create_make_rule("all", c("first_target", "second_target")))
 #'
 #' @references \url{https://www.gnu.org/software/make/manual/}
 #'
 #' @importFrom magrittr %>% equals is_greater_than
 #' @export
-create_makefile <- function(..., .dots = NULL) {
+makefile <- function(..., .dots = NULL) {
   rules <- c(list(...), .dots)
   stopifnot(
     lapply(rules, class) %>%
@@ -41,5 +41,5 @@ c.MakefileR_file <- function(..., recursive = FALSE) {
   rules <- list(...)
   makefile <- rules[[1L]]
   rules <- rules[-1L]
-  create_makefile(.dots = c(unclass(makefile), rules))
+  makefile(.dots = c(unclass(makefile), rules))
 }
