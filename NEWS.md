@@ -1,3 +1,6 @@
+- Basic parameter checking for comments
+- Full test coverage
+
 Version 0.3 (2015-06-02)
 ===
 
