@@ -17,7 +17,11 @@
 #'
 #' @export
 make_comment <- function(...) {
-  structure(list(comment = c(...)),
+  comment <- c(...)
+  if (length(comment) == 0L) {
+    stop("At least one element is required for a comment")
+  }
+  structure(list(comment = comment),
             class = c("MakefileR_comment", "MakefileR"))
 }
 
