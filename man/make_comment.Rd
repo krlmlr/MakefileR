@@ -4,10 +4,10 @@
 \alias{make_comment}
 \title{Creates a Makefile comment}
 \usage{
-make_comment(comment = NULL)
+make_comment(...)
 }
 \arguments{
-\item{comment}{A character vector without leading hash \code{#}}
+\item{...}{Character vector(s) without leading hash \code{#}}
 }
 \description{
 For helping the reader understand what's happening
