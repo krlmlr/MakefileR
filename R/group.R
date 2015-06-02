@@ -46,6 +46,7 @@ format.MakefileR_group <- function(x, ...) {
 #'   (\code{x} or the first element of \code{...})
 #'   must be of class \code{MakefileR_group}
 #'   (created by \code{\link{make_group}} or \code{\link{makefile}})
+#' @param recursive unused
 #'
 #' @rdname Concatenation
 #' @export
