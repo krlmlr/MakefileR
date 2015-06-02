@@ -1,6 +1,11 @@
 \name{NEWS}
 \title{News for Package 'MakefileR'}
 \encoding{UTF-8}
+\section{Changes in MakefileR version 0.3-2 (2015-06-02)}{
+  \itemize{
+    \item Test using AppVeyor
+  }
+}
 \section{Changes in MakefileR version 0.3.1 (2015-06-02)}{
   \itemize{
     \item Basic parameter checking for comments
