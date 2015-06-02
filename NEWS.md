@@ -1,3 +1,6 @@
+Version 0.3-2 (2015-06-02)
+===
+
 - Test using AppVeyor
 
 Version 0.3.1 (2015-06-02)
