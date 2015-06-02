@@ -32,5 +32,11 @@ format.MakefileR_group <- function(x, ...) {
 
 #' @export
 c.MakefileR_group <- function(..., recursive = FALSE) {
-  make_group(.dots = c(unclass(makefile), rules))
+  rules = list(...)
+  first_rule <- rules[[1L]]
+  other_rules <- rules[-1L]
+  structure(
+    make_group(.dots = c(first_rule$rules, other_rules), sep = first_rule$sep),
+    class = class(first_rule)
+  )
 }
