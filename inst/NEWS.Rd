@@ -1,6 +1,13 @@
 \name{NEWS}
 \title{News for Package 'MakefileR'}
 \encoding{UTF-8}
+\section{Changes in MakefileR version 0.2 (2015-06-02)}{
+  \itemize{
+    \item New functions \code{make_group} and \code{make_comment}
+    \item A Makefile (created by \code{makefile()}) is now a group with an initial comment
+    \item Improve test coverage
+  }
+}
 \section{Changes in MakefileR version 0.1 (2015-06-02)}{
   \itemize{
     \item Strip \code{create_} prefix from functions; to adapt existing code, replace \code{create_make} by \code{make}
