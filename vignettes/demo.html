@@ -66,14 +66,14 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <div id="creating-rules" class="section level2">
 <h2>Creating rules</h2>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(MakefileR)
-<span class="kw">create_make_rule</span>(<span class="st">&quot;all&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;first_target&quot;</span>, <span class="st">&quot;second_target&quot;</span>))</code></pre>
+<span class="kw">make_rule</span>(<span class="st">&quot;all&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;first_target&quot;</span>, <span class="st">&quot;second_target&quot;</span>))</code></pre>
 <pre class="sourceCode Makefile"><code class="sourceCode makefile"><span class="dv">all:</span><span class="dt"> first_target second_target</span></code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">create_make_rule</span>(<span class="st">&quot;.FORCE&quot;</span>)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">make_rule</span>(<span class="st">&quot;.FORCE&quot;</span>)</code></pre>
 <pre class="sourceCode Makefile"><code class="sourceCode makefile"><span class="ot">.FORCE:</span></code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">create_make_rule</span>(<span class="st">&quot;first_target&quot;</span>, <span class="st">&quot;.FORCE&quot;</span>, <span class="st">&quot;echo 'Building first target'&quot;</span>)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">make_rule</span>(<span class="st">&quot;first_target&quot;</span>, <span class="st">&quot;.FORCE&quot;</span>, <span class="st">&quot;echo 'Building first target'&quot;</span>)</code></pre>
 <pre class="sourceCode Makefile"><code class="sourceCode makefile"><span class="dv">first_target:</span><span class="dt"> .FORCE</span>
 ⇥      echo <span class="st">'Building first target'</span></code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">create_make_rule</span>(<span class="st">&quot;second_target&quot;</span>, <span class="st">&quot;first_target&quot;</span>,
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">make_rule</span>(<span class="st">&quot;second_target&quot;</span>, <span class="st">&quot;first_target&quot;</span>,
   <span class="kw">c</span>(<span class="st">&quot;echo 'Building second target'&quot;</span>, <span class="st">&quot;echo 'Done'&quot;</span>))</code></pre>
 <pre class="sourceCode Makefile"><code class="sourceCode makefile"><span class="dv">second_target:</span><span class="dt"> first_target</span>
 ⇥      echo <span class="st">'Building second target'</span>
@@ -81,12 +81,12 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </div>
 <div id="creating-definitions" class="section level2">
 <h2>Creating definitions</h2>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">create_make_def</span>(<span class="st">&quot;R_VERSION&quot;</span>, R.version.string)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">make_def</span>(<span class="st">&quot;R_VERSION&quot;</span>, R.version.string)</code></pre>
 <pre class="sourceCode Makefile"><code class="sourceCode makefile"><span class="dt">R_VERSION</span><span class="ch">=</span><span class="st">R version 3.2.0 (2015-04-16)</span></code></pre>
 </div>
 <div id="creating-makefile-files" class="section level2">
 <h2>Creating Makefile files</h2>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">create_makefile</span>() %&gt;%
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">makefile</span>() %&gt;%
 <span class="st">  </span><span class="kw">append_make_def</span>(<span class="st">&quot;R_VERSION&quot;</span>, R.version.string) %&gt;%
 <span class="st">  </span><span class="kw">append_make_rule</span>(<span class="st">&quot;all&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;first_target&quot;</span>, <span class="st">&quot;second_target&quot;</span>)) %&gt;%
 <span class="st">  </span><span class="kw">append_make_rule</span>(<span class="st">&quot;.FORCE&quot;</span>) %&gt;%
