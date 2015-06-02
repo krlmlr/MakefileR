@@ -46,26 +46,26 @@ from R.
 
 ```{r}
 library(MakefileR)
-create_make_rule("all", c("first_target", "second_target"))
+make_rule("all", c("first_target", "second_target"))
 
-create_make_rule(".FORCE")
+make_rule(".FORCE")
 
-create_make_rule("first_target", ".FORCE", "echo 'Building first target'")
+make_rule("first_target", ".FORCE", "echo 'Building first target'")
 
-create_make_rule("second_target", "first_target",
+make_rule("second_target", "first_target",
   c("echo 'Building second target'", "echo 'Done'"))
 ```
 
 ## Creating definitions
 
 ```{r}
-create_make_def("R_VERSION", R.version.string)
+make_def("R_VERSION", R.version.string)
 ```
 
 ## Creating Makefile files
 
 ```{r}
-create_makefile() %>%
+makefile() %>%
   append_make_def("R_VERSION", R.version.string) %>%
   append_make_rule("all", c("first_target", "second_target")) %>%
   append_make_rule(".FORCE") %>%
