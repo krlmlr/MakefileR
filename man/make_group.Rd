@@ -15,7 +15,7 @@ make_group(..., .dots = NULL, sep = NULL)
   no separator.}
 }
 \description{
-Helps separating similar rules and definition.
+Helps separating similar rules.
 }
 \examples{
 makefile(make_rule("all", c("first_target", "second_target")))

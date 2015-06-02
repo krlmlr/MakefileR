@@ -1,6 +1,6 @@
 #' Creates a group of Makefile items
 #'
-#' Helps separating similar rules and definition.
+#' Helps separating similar rules.
 #'
 #' @param ... Rules created by \code{\link{make_rule}}
 #' @param .dots A list rules in addition to \code{...}
