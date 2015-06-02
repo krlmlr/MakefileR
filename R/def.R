@@ -10,12 +10,12 @@
 #' @inheritParams append_make_def
 #'
 #' @examples
-#' create_make_def("R_USER_LIBRARY", .libPaths()[[1L]])
+#' make_def("R_USER_LIBRARY", .libPaths()[[1L]])
 #'
 #' @references \url{https://www.gnu.org/software/make/manual/}
 #'
 #' @export
-create_make_def <- function(variable, definition) {
+make_def <- function(variable, definition) {
   if (length(variable) != 1) {
     stop("variable must be a character value")
   }
@@ -36,20 +36,20 @@ create_make_def <- function(variable, definition) {
 #' existing Makefile.
 #' Most useful in pipes.
 #'
-#' @param makefile A Makefile created by \code{\link{create_makefile}}
+#' @param makefile A Makefile created by \code{\link{makefile}}
 #' @param variable Variable name
 #' @param definition Definition for this variable
 #' @return The first parameter, with the newly created rule appended
-#' @seealso \code{\link{create_make_def}}, \code{\link{create_makefile}}
+#' @seealso \code{\link{make_def}}, \code{\link{makefile}}
 #'
 #' @examples
 #' library(magrittr)
-#' create_makefile() %>%
+#' makefile() %>%
 #'   append_make_def("R_USER_LIBRARY", .libPaths()[[1L]])
 #'
 #' @export
 append_make_def <- function(makefile, variable, definition) {
-  c(makefile, create_make_def(variable = variable, definition = definition))
+  c(makefile, make_def(variable = variable, definition = definition))
 }
 
 #' @export

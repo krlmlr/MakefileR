@@ -7,7 +7,7 @@
 append_make_rule(makefile, targets, deps = NULL, script = NULL)
 }
 \arguments{
-\item{makefile}{A Makefile created by \code{\link{create_makefile}}}
+\item{makefile}{A Makefile created by \code{\link{makefile}}}
 
 \item{targets}{Target names as a character vector}
 
@@ -24,7 +24,7 @@ Most useful in pipes.
 }
 \examples{
 library(magrittr)
-create_makefile() \%>\%
+makefile() \%>\%
   append_make_rule("all", c("first_target", "second_target")) \%>\%
   append_make_rule(".FORCE") \%>\%
   append_make_rule("first_target", ".FORCE", "echo 'Building first target'") \%>\%
@@ -32,6 +32,6 @@ create_makefile() \%>\%
     c("echo 'Building second target'", "echo 'Done'"))
 }
 \seealso{
-\code{\link{create_make_rule}}, \code{\link{create_makefile}}
+\code{\link{make_rule}}, \code{\link{makefile}}
 }
 
