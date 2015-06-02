@@ -30,7 +30,26 @@ format.MakefileR_group <- function(x, ...) {
       init = character())
 }
 
+#' Concatenation of rules
+#'
+#' Rules can be appended to groups and Makefiles using the
+#' \code{\link[base]{c}} function or the \code{\link[base]{+}} operator.
+#'
+#' @param x,y,... Objects of class \code{MakefileR}, the first
+#'   (\code{x} or the first element of \code{...})
+#'   must be of class \code{MakefileR_group}
+#'   (created by \code{\link{make_group}} or \code{\link{makefile}})
+#'
+#' @rdname Concatenation
 #' @export
+#' @examples
+#' c(make_group(sep = ""),
+#'   make_group(make_comment("Dummy targets"),
+#'              make_rule(".FORCE"), make_rule(".SILENT")),
+#'   make_group(make_comment("Definitions"),
+#'              make_def("A", "a")))
+#'
+#' makefile() + (make_group() + make_comment("Definitions") + make_def("A", "a"))
 c.MakefileR_group <- function(..., recursive = FALSE) {
   rules = list(...)
   first_rule <- rules[[1L]]
@@ -40,3 +59,7 @@ c.MakefileR_group <- function(..., recursive = FALSE) {
     class = class(first_rule)
   )
 }
+
+#' @export
+#' @rdname Concatenation
+`+.MakefileR_group` <- function(x, y) c(x, y)
