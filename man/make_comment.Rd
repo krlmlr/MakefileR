@@ -13,7 +13,7 @@ make_comment(...)
 For helping the reader understand what's happening
 }
 \examples{
-make_comment("This is a comment")))
+make_comment("This is a comment")
 }
 \references{
 \url{https://www.gnu.org/software/make/manual/}

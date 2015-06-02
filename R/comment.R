@@ -5,7 +5,7 @@
 #' @param ... Character vector(s) without leading hash \code{#}
 #'
 #' @examples
-#' make_comment("This is a comment")))
+#' make_comment("This is a comment")
 #'
 #' @references \url{https://www.gnu.org/software/make/manual/}
 #'
