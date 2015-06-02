@@ -15,16 +15,14 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.path = "README-"
 )
-knit_print.MakefileR_file <- function(x, options) {
+knit_print.MakefileR <- function(x, options) {
   knitr::knit_print(
     c("``` Makefile",
       format(x) %>% gsub("\t", "⇥      ", .),
       "```") %>%
-      paste(collapse = "\n") %>%
+      paste(">", ., collapse = "\n") %>%
       knitr::asis_output(), options)
 }
-knit_print.MakefileR_rule <- knit_print.MakefileR_file
-knit_print.MakefileR_def <- knit_print.MakefileR_file
 ```
 
 [GNU Make](https://www.gnu.org/software/make) is a standard tool to define
