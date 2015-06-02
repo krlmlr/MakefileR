@@ -9,3 +9,4 @@
 ^Makefile\.in$
 ^makeR
 ^wercker\.yml$
+^appveyor\.yml$
