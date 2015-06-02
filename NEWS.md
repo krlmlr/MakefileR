@@ -1,3 +1,6 @@
+- Support `+` operator for appending rules to groups
+- Remove `append_*` functions, replace `append_make_...(...)` by `c(make_...(...))` or rewrite using `+`
+
 Version 0.2 (2015-06-02)
 ===
 
