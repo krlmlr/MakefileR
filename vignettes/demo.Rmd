@@ -65,12 +65,12 @@ make_def("R_VERSION", R.version.string)
 ## Creating Makefile files
 
 ```{r}
-makefile() %>%
-  append_make_def("R_VERSION", R.version.string) %>%
-  append_make_rule("all", c("first_target", "second_target")) %>%
-  append_make_rule(".FORCE") %>%
-  append_make_rule("first_target", ".FORCE", "echo 'Building first target'") %>%
-  append_make_rule("second_target", "first_target",
+makefile() +
+  make_def("R_VERSION", R.version.string) +
+  make_rule("all", c("first_target", "second_target")) +
+  make_rule(".FORCE") +
+  make_rule("first_target", ".FORCE", "echo 'Building first target'") +
+  make_rule("second_target", "first_target",
     c("echo 'Building second target'", "echo 'Done'"))
 ```
 
