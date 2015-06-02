@@ -32,9 +32,6 @@ format.MakefileR_group <- function(x, ...) {
 }
 
 #' @export
-print.MakefileR_group <- print.MakefileR_file
-
-#' @export
 c.MakefileR_group <- function(..., recursive = FALSE) {
   make_group(.dots = c(unclass(makefile), rules))
 }

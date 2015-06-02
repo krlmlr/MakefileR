@@ -73,11 +73,6 @@ format.MakefileR_rule <- function(x, ...) {
   )
 }
 
-#' @export
-print.MakefileR_rule <- function(x, ...) {
-  cat(paste0(format(x), "\n"), sep = "")
-}
-
 combine_targets <- function(targets) {
   paste(targets, collapse = " ")
 }

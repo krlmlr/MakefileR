@@ -29,11 +29,6 @@ format.MakefileR_file <- function(x, ...) {
 }
 
 #' @export
-print.MakefileR_file <- function(x, ...) {
-  cat(paste0(format(x), "\n"), sep = "")
-}
-
-#' @export
 c.MakefileR_file <- function(..., recursive = FALSE) {
   rules <- list(...)
   makefile <- rules[[1L]]

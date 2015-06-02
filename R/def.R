@@ -56,8 +56,3 @@ append_make_def <- function(makefile, variable, definition) {
 format.MakefileR_def <- function(x, ...) {
   sprintf("%s=%s", x$variable, x$definition)
 }
-
-#' @export
-print.MakefileR_def <- function(x, ...) {
-  cat(paste0(format(x), "\n"), sep = "")
-}
