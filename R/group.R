@@ -13,7 +13,6 @@
 #'
 #' @references \url{https://www.gnu.org/software/make/manual/}
 #'
-#' @importFrom magrittr %>% equals is_greater_than
 #' @export
 make_group <- function(..., .dots = NULL, comment = NULL, sep = NULL) {
   rules <- c(list(...), .dots)
