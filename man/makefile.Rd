@@ -7,7 +7,8 @@
 makefile(..., .dots = NULL)
 }
 \arguments{
-\item{...}{Rules created by \code{\link{make_rule}}}
+\item{...}{Items created by \code{\link{make_rule}} or other \code{make_}
+functions}
 
 \item{.dots}{A list rules in addition to \code{...}}
 }

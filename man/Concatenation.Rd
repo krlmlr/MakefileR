@@ -10,12 +10,12 @@
 \method{+}{MakefileR_group}(x, y)
 }
 \arguments{
-\item{recursive}{unused}
-
-\item{x,y,...}{Objects of class \code{MakefileR}, the first
+\item{...,x,y}{Objects of class \code{MakefileR}, the first
 (\code{x} or the first element of \code{...})
 must be of class \code{MakefileR_group}
 (created by \code{\link{make_group}} or \code{\link{makefile}})}
+
+\item{recursive}{unused}
 }
 \description{
 Rules can be appended to groups and Makefiles using the

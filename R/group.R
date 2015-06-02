@@ -6,7 +6,8 @@
 #' \code{\link[base]{c}} function or the \code{\link[base]{+}} operator
 #' to append groups to other groups and Makefiles (thus creating nested groups).
 #'
-#' @param ... Rules created by \code{\link{make_rule}}
+#' @param ... Items created by \code{\link{make_rule}} or other \code{make_}
+#'   functions
 #' @param .dots A list rules in addition to \code{...}
 #' @param sep Separator between group items, \code{NULL} (the default) means
 #'   no separator.
@@ -42,7 +43,7 @@ format.MakefileR_group <- function(x, ...) {
 #' Rules can be appended to groups and Makefiles using the
 #' \code{\link[base]{c}} function or the \code{\link[base]{+}} operator.
 #'
-#' @param x,y,... Objects of class \code{MakefileR}, the first
+#' @param ...,x,y Objects of class \code{MakefileR}, the first
 #'   (\code{x} or the first element of \code{...})
 #'   must be of class \code{MakefileR_group}
 #'   (created by \code{\link{make_group}} or \code{\link{makefile}})
