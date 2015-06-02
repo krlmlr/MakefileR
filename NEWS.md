@@ -1,3 +1,6 @@
+Version 0.2 (2015-06-02)
+===
+
 - New functions `make_group` and `make_comment`
 - A Makefile (created by `makefile()`) is now a group with an initial comment
 - Improve test coverage
