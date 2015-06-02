@@ -1,4 +1,4 @@
-- Strip `create_` prefix from functions
+- Strip `create_` prefix from functions; to adapt existing code, replace `create_make` by `make`
 
 Version 0.0-3 (2015-06-02)
 ===
