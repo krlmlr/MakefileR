@@ -39,6 +39,7 @@ makefile() +
 \code{\link{makefile}}, \code{\link{make_group}}
 
 Other items: \code{\link{make_comment}};
-  \code{\link{make_group}}; \code{\link{make_rule}}
+  \code{\link{make_group}}; \code{\link{make_rule}};
+  \code{\link{make_text}}
 }
 

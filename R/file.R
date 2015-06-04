@@ -1,15 +1,16 @@
 #' Creates a Makefile
 #'
-#' A \code{Makefile} consists of a list of rules.
+#' A \code{Makefile} consists of a list of rules, definition, comments
+#' and other items.
 #'
 #' Use the
 #' \code{\link[base]{c}} function or the \code{\link[base]{+}} operator
-#' to append rules, definitions, comments and groups.
+#' to append rules, definitions, comments, plain text, and groups.
 #'
 #' @inheritParams make_group
 #' @return An object of class \code{MakefileR_file}
 #' @seealso \code{\link{make_rule}}, \code{\link{make_def}},
-#'   \code{\link{make_group}}, \code{\link{make_comment}},
+#'   \code{\link{make_comment}}, \code{\link{make_text}}, \code{\link{make_group}},
 #'   \code{\link{c.MakefileR_group}}
 #'
 #' @examples

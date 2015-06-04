@@ -28,6 +28,7 @@ make_comment("This is a comment")
 }
 \seealso{
 Other items: \code{\link{make_def}};
-  \code{\link{make_group}}; \code{\link{make_rule}}
+  \code{\link{make_group}}; \code{\link{make_rule}};
+  \code{\link{make_text}}
 }
 

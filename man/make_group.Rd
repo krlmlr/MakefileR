@@ -36,6 +36,7 @@ makefile(make_rule("all", c("first_target", "second_target")))
 \code{\link{c.MakefileR_group}}
 
 Other items: \code{\link{make_comment}};
-  \code{\link{make_def}}; \code{\link{make_rule}}
+  \code{\link{make_def}}; \code{\link{make_rule}};
+  \code{\link{make_text}}
 }
 

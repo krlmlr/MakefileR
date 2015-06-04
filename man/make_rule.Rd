@@ -53,6 +53,7 @@ makefile() +
 \code{\link{makefile}}
 
 Other items: \code{\link{make_comment}};
-  \code{\link{make_def}}; \code{\link{make_group}}
+  \code{\link{make_def}}; \code{\link{make_group}};
+  \code{\link{make_text}}
 }
 
