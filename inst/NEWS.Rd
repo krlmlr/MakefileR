@@ -1,6 +1,11 @@
 \name{NEWS}
 \title{News for Package 'MakefileR'}
 \encoding{UTF-8}
+\section{Changes in MakefileR version 0.3-3 (2015-06-04)}{
+  \itemize{
+    \item New function \code{make_text} for arbitrary plain-text items
+  }
+}
 \section{Changes in MakefileR version 0.3-2 (2015-06-02)}{
   \itemize{
     \item Test using AppVeyor
