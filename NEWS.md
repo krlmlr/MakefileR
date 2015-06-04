@@ -1,3 +1,6 @@
+Version 0.3-3 (2015-06-04)
+===
+
 - New function `make_text` for arbitrary plain-text items
 
 Version 0.3-2 (2015-06-02)
