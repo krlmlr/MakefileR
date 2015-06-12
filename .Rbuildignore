@@ -5,8 +5,5 @@
 ^\.gitignore$
 ^NEWS\.md$
 ^NEWS\.md\.tmpl$
-^Makefile$
-^Makefile\.in$
-^makeR
 ^wercker\.yml$
 ^appveyor\.yml$
