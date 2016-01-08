@@ -14,9 +14,9 @@
 #' \code{\link[base]{c}} function or the \code{\link[base]{+}} operator
 #' to append rules to groups and Makefiles.
 #'
-#' @param targets Target names as a character vector
-#' @param deps Dependency names as a character vector
-#' @param script A script to execute to build the targets.
+#' @param targets \code{[character]}\cr Target names
+#' @param deps \code{[character]}\cr Dependency names
+#' @param script \code{[character]}\cr A script to execute to build the targets.
 #' @return An object of class \code{MakefileR_rule}
 #' @seealso \code{\link{makefile}}
 #' @family items
