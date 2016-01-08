@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>make_rule. MakefileR 0.3-3</title>
+<title>make_rule. MakefileR 0.3-5</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -32,7 +32,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">MakefileR 0.3-3</a>
+      <a class="brand" href="#">MakefileR 0.3-5</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -58,11 +58,11 @@
     <h2>Arguments</h2>
     <dl>
       <dt>targets</dt>
-      <dd>Target names as a character vector</dd>
+      <dd><code>[character]</code> Target names</dd>
       <dt>deps</dt>
-      <dd>Dependency names as a character vector</dd>
+      <dd><code>[character]</code> Dependency names</dd>
       <dt>script</dt>
-      <dd>A script to execute to build the targets.</dd>
+      <dd><code>[character]</code> A script to execute to build the targets.</dd>
     </dl>
     
     <div class="Value">
@@ -146,7 +146,8 @@ first_target: .FORCE
 second_target: first_target
 	echo &#39;Building second target&#39;
 	echo &#39;Done&#39;
-</div></pre>
+</div>
+<div class='input'></div></pre>
   </div>
   <div class="span4">
     <!-- <ul>
@@ -160,8 +161,8 @@ second_target: first_target
     
 <code><a href='makefile.html'>makefile</a></code>
 
-Other items: <code><a href='make_comment.html'>make_comment</a></code>;
-  <code><a href='make_def.html'>make_def</a></code>; <code><a href='make_group.html'>make_group</a></code>;
+Other items: <code><a href='make_comment.html'>make_comment</a></code>,
+  <code><a href='make_def.html'>make_def</a></code>, <code><a href='make_group.html'>make_group</a></code>,
   <code><a href='make_text.html'>make_text</a></code>
 
         
