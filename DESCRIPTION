@@ -1,14 +1,14 @@
+Encoding: UTF-8
 Package: MakefileR
-Title: Create Makefiles Using R
+Title: Create 'Makefiles' Using R
+Description: A user-friendly interface for the construction of 'Makefiles'.
 Version: 0.4
 Date: 2016-01-08
 Authors@R: person("Kirill", "Müller", role = c("aut", "cre"), email = "krlmlr+r@mailbox.org")
-Description: A user-friendly interface for the construction of "Makefiles".
 Imports: magrittr
 Suggests: testthat, knitr, rmarkdown
 License: GPL-3
 LazyData: true
-Encoding: UTF-8
 URLNote: https://github.com/krlmlr/MakefileR
 URL: http://krlmlr.github.io/MakefileR
 BugReports: https://github.com/krlmlr/MakefileR/issues
