@@ -4,7 +4,6 @@ Version: 0.3-3
 Authors@R: as.person("Kirill Müller <krlmlr+r@mailbox.org> [aut, cre]")
 Description: This package provides a user-friendly interface for the
   construction of Makefiles.
-Depends: R (>= 3.2.0)
 Imports: magrittr
 Suggests: testthat,
     knitr,
