@@ -1,35 +1,13 @@
-Version 0.3-5 (2016-01-08)
+Version 0.4 (2016-01-08)
 ===
 
 - New `write_makefile()` (#1).
-- Add argument types to documentation of functions.
-- Upgrade makeR
-
-
-Version 0.3-4 (2016-01-08)
-===
-
-- Remove explicit R dependency.
-- Install `makeR` as subtree.
-
-
-Version 0.3-3 (2015-06-04)
-===
-
 - New function `make_text` for arbitrary plain-text items
-
-
-Version 0.3-2 (2015-06-02)
-===
-
-- Test using AppVeyor
-
-
-Version 0.3.1 (2015-06-02)
-===
-
-- Basic parameter checking for comments
+- Remove explicit R dependency.
+- Add argument types to documentation of functions.
+- Basic argument checking for comments
 - Full test coverage
+- Test on Windows using AppVeyor
 
 
 Version 0.3 (2015-06-02)
