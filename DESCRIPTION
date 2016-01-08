@@ -1,6 +1,6 @@
 Package: MakefileR
 Title: Create Makefiles using R
-Version: 0.3-5
+Version: 0.4
 Date: 2016-01-08
 Authors@R: as.person("Kirill Müller <krlmlr+r@mailbox.org> [aut, cre]")
 Description: This package provides a user-friendly interface for the
