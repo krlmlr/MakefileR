@@ -1,12 +1,21 @@
+Version 0.3-4 (2016-01-08)
+===
+
+- Remove explicit R dependency.
+- Install `makeR` as subtree.
+
+
 Version 0.3-3 (2015-06-04)
 ===
 
 - New function `make_text` for arbitrary plain-text items
 
+
 Version 0.3-2 (2015-06-02)
 ===
 
 - Test using AppVeyor
+
 
 Version 0.3.1 (2015-06-02)
 ===
@@ -14,11 +23,13 @@ Version 0.3.1 (2015-06-02)
 - Basic parameter checking for comments
 - Full test coverage
 
+
 Version 0.3 (2015-06-02)
 ===
 
 - Support `+` operator for appending rules to groups
 - Remove `append_*` functions, replace `append_make_...(...)` by `c(make_...(...))` or rewrite using `+`
+
 
 Version 0.2 (2015-06-02)
 ===
@@ -27,15 +38,18 @@ Version 0.2 (2015-06-02)
 - A Makefile (created by `makefile()`) is now a group with an initial comment
 - Improve test coverage
 
+
 Version 0.1 (2015-06-02)
 ===
 
 - Strip `create_` prefix from functions; to adapt existing code, replace `create_make` by `make`
 
+
 Version 0.0-3 (2015-06-02)
 ===
 
 - New functions `create_make_def` and `append_make_def`
+
 
 Version 0.0-2 (2015-05-18)
 ===
@@ -43,6 +57,7 @@ Version 0.0-2 (2015-05-18)
 - Add vignette
 - Full test coverage
 - Fix minor whitespace glitches
+
 
 Version 0.0-1 (2015-05-17)
 ===
