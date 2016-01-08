@@ -6,7 +6,7 @@
 #' \code{\link[base]{c}} function or the \code{\link[base]{+}} operator
 #' to append comments to groups and Makefiles.
 #'
-#' @param ... Character vector(s) without leading hash \code{#}
+#' @param ... \code{[character]}\cr Comments without leading hash \code{#}
 #' @return An object of class \code{MakefileR_comment}
 #' @family items
 #'
