@@ -5,8 +5,6 @@ set -e
 rm -f Makefile
 cp makeR/Makefile.tmpl Makefile
 
-echo "^Makefile$" >> .Rbuildignore
-echo "^Makefile\.in$" >> .Rbuildignore
-echo "^makeR$" >> .Rbuildignore
+Rscript -e 'devtools::use_build_ignore(c("Makefile", "Makefile.in", "makeR"))'
 git add Makefile .Rbuildignore
-git commit -m "install makeR as subtree"
+if ! sh $(dirname $0)/git-is-clean; then git commit -m "install makeR as subtree"; fi
