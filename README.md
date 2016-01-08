@@ -7,9 +7,14 @@ This is a git submodule we include in our R packages to have a Makefile and some
 The submodule is always included under the path 'makeR' in the respective package repositories, e.g., look here:
 https://github.com/berndbischl/BBmisc
 
-### Installing the submodule
+### Upgrading
 
-Execute **one** of the following in a terminal:
+The installation method has switched from submodules to subtrees. To upgrade an existing submodule-based installation, please run `make uninistall` first; you may also want to remove the `.gitmodules` file if you do not use other submodules. After switching, you can run `make upgrade` as usual for further upgrades.
+
+
+### Installing the subtree
+
+Execute the following in a terminal:
 
 ```
 curl http://krlmlr.github.io/makeR/install2 | sh
@@ -18,17 +23,6 @@ curl http://krlmlr.github.io/makeR/install2 | sh
 Take a look at [the installer script](https://github.com/krlmlr/makeR/blob/gh-pages/install2) if you're curious.
 
 
-### Initially cloning the submodule
-
-If the 'makeR' directory is empty after you have cloned a package repository, simply do 
-
-```
-git submodule init
-git submodule update
-```
-
-while in bash in the main, top-level directory of the respective package repo.
-
 ### Updating makeR
 
 If you want to update the makeR tool chain, run: 
@@ -36,16 +30,6 @@ If you want to update the makeR tool chain, run:
 ```
 make upgrade
 ```
-
-### More info
-
-http://chrisjean.com/2009/04/20/git-submodules-adding-using-removing-and-updating/
-
-
-
-
-
-
 
 
 
