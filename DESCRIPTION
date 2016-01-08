@@ -1,13 +1,12 @@
 Package: MakefileR
 Title: Create Makefiles using R
-Version: 0.3-3
+Version: 0.3-5
+Date: 2016-01-08
 Authors@R: as.person("Kirill Müller <krlmlr+r@mailbox.org> [aut, cre]")
 Description: This package provides a user-friendly interface for the
-  construction of Makefiles.
+        construction of Makefiles.
 Imports: magrittr
-Suggests: testthat,
-    knitr,
-    rmarkdown
+Suggests: testthat, knitr, rmarkdown
 License: GPL-3
 LazyData: true
 Encoding: UTF-8
@@ -15,3 +14,4 @@ GitHub: https://github.com/krlmlr/MakefileR
 URL: https://krlmlr.github.io/MakefileR
 BugReports: https://github.com/krlmlr/MakefileR/issues
 VignetteBuilder: knitr
+RoxygenNote: 5.0.1.9000

@@ -1,3 +1,11 @@
+Version 0.3-5 (2016-01-08)
+===
+
+- New `write_makefile()` (#1).
+- Add argument types to documentation of functions.
+- Upgrade makeR
+
+
 Version 0.3-4 (2016-01-08)
 ===
 

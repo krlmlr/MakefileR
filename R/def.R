@@ -11,8 +11,8 @@
 #' \code{\link[base]{c}} function or the \code{\link[base]{+}} operator
 #' to append definitions to groups and Makefiles.
 #'
-#' @param variable Variable name
-#' @param definition Definition for this variable
+#' @param variable \code{[character(1)]}\cr Variable name
+#' @param definition \code{[character(1)]}\cr Definition for this variable
 #' @return An object of class \code{MakefileR_def}
 #' @seealso \code{\link{makefile}}, \code{\link{make_group}}
 #' @family items
