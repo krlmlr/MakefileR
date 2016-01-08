@@ -3,10 +3,10 @@
 ^README\.Rmd$
 ^README-.*\.png$
 ^\.gitignore$
-^NEWS\.md$
 ^NEWS\.md\.tmpl$
 ^wercker\.yml$
 ^appveyor\.yml$
 ^Makefile$
 ^Makefile\.in$
 ^makeR$
+^cran-comments\.md$
