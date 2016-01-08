@@ -1,3 +1,10 @@
+Version 1.0-1 (2016-01-08)
+===
+
+- Fix AppVeyor test.
+- Add CRAN status badge.
+
+
 Version 1.0 (2016-01-08)
 ===
 
