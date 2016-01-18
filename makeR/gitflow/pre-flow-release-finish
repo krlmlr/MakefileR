@@ -18,5 +18,12 @@ BRANCH=$3
 
 # Implement your script here.
 
-set -e
 hub ci-status -v
+HUB_EXIT=$?
+if [ $HUB_EXIT -eq 0 ]; then exit 0; fi
+if [ $HUB_EXIT -ne 3 ]; then exit $HUB_EXIT; fi
+sleep 10
+hub ci-status -v
+HUB_EXIT=$?
+if [ $HUB_EXIT -eq 3 ]; then exit 0; fi
+exit $HUB_EXIT

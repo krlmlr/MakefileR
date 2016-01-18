@@ -5,7 +5,7 @@ autoroxy::rox_on()
 library(magrittr)
 
 repo <- git2r::repository()
-branch_name <- (git2r::branches(repo) %>% Filter(git2r::is_head, .) %>% extract2(1))@name
+branch_name <- (git2r::branches(repo) %>% Filter(git2r::is_head, .) %>% "[["(1))@name
 version <- gsub("^.*/([^/]*)$", "\\1", branch_name)
 package_version(version)
 date <- as.character(Sys.Date())
