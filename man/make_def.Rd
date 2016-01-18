@@ -4,12 +4,15 @@
 \alias{make_def}
 \title{Creates a variable definition in a Makefile}
 \usage{
-make_def(variable, definition)
+make_def(variable, definition, operator = "=")
 }
 \arguments{
 \item{variable}{\code{[character(1)]}\cr Variable name}
 
 \item{definition}{\code{[character(1)]}\cr Definition for this variable}
+
+\item{operator}{\code{[character(1)]}\cr Which operator to use, default:
+\code{=}}
 }
 \value{
 An object of class \code{MakefileR_def}
