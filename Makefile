@@ -137,7 +137,7 @@ covr:
 	Rscript -e 'if (!requireNamespace("covr")) devtools::install_github("jimhester/covr"); covr::codecov()'
 
 lintr:
-	Rscript -e 'if (!requireNamespace("lintr")) devtools::install_github("jimhester/lintr"); lintr::lint_package()'
+	Rscript -e 'if (!requireNamespace("lintr")) devtools::install_github("jimhester/lintr"); Sys.setenv(LINTR_COMMENT_BOT="FALSE"); lintr::lint_package()'
 
 check-rev-dep:
 	echo "Running reverse dependency checks for CRAN ..."
