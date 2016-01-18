@@ -1,3 +1,4 @@
+# nolint start
 {
     if (!"DESCRIPTION" %in% dir()) {
         return(invisible(NULL))
@@ -17,3 +18,4 @@
     }
     roxygen2::roxygenize(roclets = c("rd"))
 }
+# nolint end

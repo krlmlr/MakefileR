@@ -1,4 +1,4 @@
 library(testthat)
-library(MakefileR)
+library("MakefileR")
 
 test_check("MakefileR")
