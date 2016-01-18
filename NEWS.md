@@ -1,3 +1,10 @@
+Version 1.0-2 (2016-01-18)
+===
+
+- Restore full test coverage.
+- `make_def()` gains new argument `operator`, default `=`.
+
+
 Version 1.0-1 (2016-01-08)
 ===
 
