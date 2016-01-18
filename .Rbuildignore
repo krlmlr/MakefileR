@@ -10,3 +10,4 @@
 ^Makefile\.in$
 ^makeR$
 ^cran-comments\.md$
+^\.lintr$
