@@ -60,7 +60,7 @@ format.MakefileR_group <- function(x, ...) {
 #'
 #' makefile() + (make_group() + make_comment("Definitions") + make_def("A", "a"))
 c.MakefileR_group <- function(..., recursive = FALSE) {
-  rules = list(...)
+  rules <- list(...)
   first_rule <- rules[[1L]]
   other_rules <- rules[-1L]
   structure(
@@ -71,4 +71,4 @@ c.MakefileR_group <- function(..., recursive = FALSE) {
 
 #' @export
 #' @rdname Concatenation
-`+.MakefileR_group` <- function(x, y) c(x, y)
+`+.MakefileR_group` <- function(x, y) c(x, y) # nolint
