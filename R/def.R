@@ -13,6 +13,8 @@
 #'
 #' @param variable \code{[character(1)]}\cr Variable name
 #' @param definition \code{[character(1)]}\cr Definition for this variable
+#' @param operator \code{[character(1)]}\cr Which operator to use, default:
+#'   \code{=}
 #' @return An object of class \code{MakefileR_def}
 #' @seealso \code{\link{makefile}}, \code{\link{make_group}}
 #' @family items
@@ -25,22 +27,26 @@
 #' @references \url{https://www.gnu.org/software/make/manual/}
 #'
 #' @export
-make_def <- function(variable, definition) {
+make_def <- function(variable, definition, operator = "=") {
   if (length(variable) != 1) {
     stop("variable must be a character value")
   }
   if (length(definition) != 1) {
     stop("definition must be a character value")
   }
+  if (length(operator) != 1) {
+    stop("operator must be a character value")
+  }
   structure(
     list(
       variable = variable,
-      definition = definition
+      definition = definition,
+      operator = operator
     ),
     class = c("MakefileR_def", "MakefileR"))
 }
 
 #' @export
 format.MakefileR_def <- function(x, ...) {
-  sprintf("%s=%s", x$variable, x$definition)
+  sprintf("%s%s%s", x$variable, x$operator, x$definition)
 }
