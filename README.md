@@ -4,7 +4,7 @@
 This little package helps creating `Makefile` files programmatically. Install from GitHub:
 
 ``` r
-devtools::install("krlmlr/MakefileR")
+devtools::install_github("krlmlr/MakefileR")
 ```
 
 See the [vignette](http://krlmlr.github.io/MakefileR/vignettes/demo.html) for more detail.
